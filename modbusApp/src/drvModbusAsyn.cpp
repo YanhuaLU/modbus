@@ -51,12 +51,12 @@
                                         /* Note: this value actually has no effect, the real
                                          * timeout is set in modbusInterposeConfig */
 
-#define WAGO_ID_STRING      "Wago"      /* If the plcName parameter to drvModbusAsynConfigure contains
+#define WAGO_ID_STRING      "ps"      /* If the plcName parameter to drvModbusAsynConfigure contains
                                          * this substring then the driver will do the initial readback
                                          * for write operations and the readback for read/modify/write
-                                         * operations at address plus 0x200. */
+                                         * operations at address plus 0x400. */
 
-#define WAGO_OFFSET         0x200       /* The offset for readback operations on Wago devices */
+#define WAGO_OFFSET         -0x400       /* The offset for readback operations on Wago devices */
 
 /* MODBUS_READ_WRITE_MULTIPLE_REGISTERS (function 23) is not very common, and is problematic.
  * It can use a different range of registers for reading and writing.
